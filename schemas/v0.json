@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://dprint.dev/schemas/v1.json",
+  "$id": "https://dprint.dev/schemas/v0.json",
   "title": "Dprint Configuration File",
   "description": "Schema for a dprint configuration file.",
   "type": "object",
@@ -93,6 +93,9 @@
     },
     "markdown": {
       "$ref": "https://plugins.dprint.dev/schemas/markdown-v0.json"
+    },
+    "toml": {
+      "$ref": "https://plugins.dprint.dev/schemas/toml-v0.json"
     }
   },
   "additionalProperties": {

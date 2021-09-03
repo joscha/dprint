@@ -2,15 +2,15 @@
 <span class="hljs-keyword">import</span> { createStreaming } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://deno.land/x/dprint@x.x.x/mod.ts&quot;</span>;
 
 <span class="hljs-keyword">const</span> globalConfig = {
-    <span class="hljs-attr">indentWidth</span>: <span class="hljs-number">2</span>,
-    <span class="hljs-attr">lineWidth</span>: <span class="hljs-number">80</span>,
+  <span class="hljs-attr">indentWidth</span>: <span class="hljs-number">2</span>,
+  <span class="hljs-attr">lineWidth</span>: <span class="hljs-number">80</span>,
 };
 <span class="hljs-keyword">const</span> tsFormatter = <span class="hljs-keyword">await</span> <span class="hljs-title function_">createStreaming</span>(
-    <span class="hljs-title function_">fetch</span>(<span class="hljs-string">&quot;https://plugins.dprint.dev/typescript-x.x.x.wasm&quot;</span>),
+  <span class="hljs-title function_">fetch</span>(<span class="hljs-string">&quot;https://plugins.dprint.dev/typescript-x.x.x.wasm&quot;</span>),
 );
 
 tsFormatter.<span class="hljs-title function_">setConfig</span>(globalConfig, {
-    <span class="hljs-attr">semiColons</span>: <span class="hljs-string">&quot;asi&quot;</span>,
+  <span class="hljs-attr">semiColons</span>: <span class="hljs-string">&quot;asi&quot;</span>,
 });
 
 <span class="hljs-comment">// outputs: &quot;const t = 5\n&quot;</span>

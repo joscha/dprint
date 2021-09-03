@@ -10,26 +10,28 @@ C:\dev\my-project\website\playground\config-overrides.js
 C:\dev\my-project\website\playground\src\components\ExternalLink.tsx
 C:\dev\my-project\website\playground\src\components\index.ts
 C:\dev\my-project\website\playground\src\components\Spinner.tsx
-...etc...</code></pre><h3 id="outputting-resolved-configuration">Outputting resolved configuration</h3><p>When diagnosing configuration issues it might be useful to find out what the internal lower level configuration used by the plugins is. To see that, use the following command:</p><pre><code class="bash language-bash">dprint output-resolved-config</code></pre><p>Example output:</p><pre><code class="text language-text">typescript: {
-  &quot;arguments.preferHanging&quot;: true,
-  &quot;arguments.preferSingleLine&quot;: false,
-  &quot;arguments.trailingCommas&quot;: &quot;onlyMultiLine&quot;,
-  &quot;arrayExpression.preferHanging&quot;: true,
-  &quot;arrayExpression.preferSingleLine&quot;: false,
-  &quot;arrayExpression.trailingCommas&quot;: &quot;onlyMultiLine&quot;,
-  &quot;arrayPattern.preferHanging&quot;: true,
-  // ...etc...
-  &quot;whileStatement.singleBodyPosition&quot;: &quot;nextLine&quot;,
-  &quot;whileStatement.spaceAfterWhileKeyword&quot;: true,
-  &quot;whileStatement.useBraces&quot;: &quot;preferNone&quot;
-}
-json: {
-  &quot;commentLine.forceSpaceAfterSlashes&quot;: true,
-  &quot;indentWidth&quot;: 2,
-  &quot;lineWidth&quot;: 160,
-  &quot;newLineKind&quot;: &quot;lf&quot;,
-  &quot;useTabs&quot;: false
-}</code></pre><h3 id="outputting-format-times">Outputting format times</h3><p>It can be useful to know what files take a long time to format as you may consider skipping them. To see this information, use the following command:</p><pre><code class="bash language-bash">dprint output-format-times</code></pre><p>Example output:</p><pre><code class="text language-text">0ms - C:\dev\my-project\dprint.json
+...etc...</code></pre><h3 id="outputting-resolved-configuration">Outputting resolved configuration</h3><p>When diagnosing configuration issues it might be useful to find out what the internal lower level configuration used by the plugins is. To see that, use the following command:</p><pre><code class="bash language-bash">dprint output-resolved-config</code></pre><p>Example output (JSON):</p><pre><code class="json language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;typescript&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;arguments.preferHanging&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;arguments.preferSingleLine&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;arguments.trailingCommas&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;onlyMultiLine&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;arrayExpression.preferHanging&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;arrayExpression.preferSingleLine&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;arrayExpression.trailingCommas&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;onlyMultiLine&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;arrayPattern.preferHanging&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-comment">// ...etc...</span>
+    <span class="hljs-attr">&quot;whileStatement.singleBodyPosition&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;nextLine&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;whileStatement.spaceAfterWhileKeyword&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;whileStatement.useBraces&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;preferNone&quot;</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;json&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;commentLine.forceSpaceAfterSlashes&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;indentWidth&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">2</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;lineWidth&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">160</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;newLineKind&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;lf&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;useTabs&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span></code></pre><h3 id="outputting-format-times">Outputting format times</h3><p>It can be useful to know what files take a long time to format as you may consider skipping them. To see this information, use the following command:</p><pre><code class="bash language-bash">dprint output-format-times</code></pre><p>Example output:</p><pre><code class="text language-text">0ms - C:\dev\my-project\dprint.json
 0ms - C:\dev\my-project\README.md
 1ms - C:\dev\my-project\other-file.md
 2ms - C:\dev\my-project\package.json
